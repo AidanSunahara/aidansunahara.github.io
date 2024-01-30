@@ -1,0 +1,6 @@
+@tailwind base;
+#toggle:checked ~ label span.toggle-dot {
+    @apply translate-x-8;
+}
+@tailwind components;
+@tailwind utilities;

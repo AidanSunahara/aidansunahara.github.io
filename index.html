@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html id = "base" data-theme="forest" class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title class="">Let's Play Rock Paper Scissors!</title>
+    <link rel="functions" href="/comments.js">
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body id = "background" class="pb-16 sm:pb-0">
+    <div class="flex justify-end">
+        <div class="flex flex-row mt-8 mr-8 space-x-6 justify-center">
+            <span class="mt-3 text-md font-bold">
+                Light
+            </span>
+            <input type="checkbox" id="toggle" class="hidden">
+            <label for="toggle">
+                <span class = "w-20 h-12 flex items-center bg-gray-300 rounded-full p-1">
+                    <span class="toggle-dot w-10 h-10 bg-white rounded-full shadow-md transform duration-300 ease-in-out">
+                        
+                    </span>
+                </span>
+            </label>
+            <span class="mt-3 text-md font-bold">
+                Dark
+            </span>
+        </div>
+    </div>
+    <h1 class="text-center text-3xl font-bold mt-12 md:text-7xl">
+        Rock Paper Scissors
+    </h1>
+      
+
+    <h2 class="py-12 md:pt-20 text-xl md:text-4xl text-center font-bold ">
+        Make a choice:
+    </h2>
+
+    <div class="flex justify-center pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-28 gap-y-12">
+            <button id="rock" class="hover:scale-125 duration-200 h-28 w-28 lg:h-48 lg:w-48 bg-white rounded-full p-4">
+                <img src="/images/rock.png" alt="rock">
+            </button>
+
+            <button id="paper" class="hover:scale-125 duration-200 h-28 w-28 lg:h-48 lg:w-48 bg-white rounded-full p-4">
+                <img src="/images/paper.png" alt="paper">
+            </button>
+
+            <button id="scissors" class="hover:scale-125 duration-200 h-28 w-28 lg:h-48 lg:w-48 bg-white rounded-full p-4">
+                <img src="/images/scissors.png" alt="scissors">
+            </button>
+        </div>
+    </div>
+
+    <div class="flex justify-center pb-6 text-center px-12 sm:px-0">
+        <h2 class ="text-center text-3xl" id="outcome">Results</h2>
+    </div>
+
+    
+
+    <div class="flex justify-center pb-6 text-center px-12 sm:px-0">
+        <h2 class ="text-center text-lg" id="rounds">First to 10 Wins!</h2>
+    </div>
+
+    <div id="score" class="text-center text-lg">
+        <h2>Scores</h2>
+        <h2 id="playerScore">Player Score: 0</h2>
+        <h2 id="computerScore">Computer Score: 0</h2>
+        <h2 id="tieScore">Tie Score: 0</h2>
+        <h2 class ="text-center text-5xl" id="winner" hidden>Winner</h2>
+        <h2 id="resetMessage" hidden>(Click Reset to Play Again!)</h2>
+        <button class="btn btn-primary mt-6" id="reset">
+            Reset
+        </button>
+    </div>
+
+    <script type="module" src="logic.js"></script>
+    <script type="module" src="theme_changer.js"></script>
+</body>
+
+</html>
